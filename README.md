@@ -1,24 +1,15 @@
-# README
+# 通信販売プラットフォーム
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 前提
 
-Things you may want to cover:
+* Ruby version 2.7
 
-* Ruby version
+* Mysql 5.7
 
-* System dependencies
+### ローカル環境構築
+以下のコマンドをRailsAppのフォルダで流してください
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+docker-compose up -d
+```
+終わったら、「localhost:3000」にアクセスして見てください。
