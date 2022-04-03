@@ -4,5 +4,5 @@ RUN mkdir /code
 WORKDIR /code
 COPY Gemfile /code/Gemfile
 COPY Gemfile.lock /code/Gemfile.lock
-RUN bundle install --path vendor/bundle
+RUN bundle install
 COPY . /code
