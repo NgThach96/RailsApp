@@ -14,12 +14,14 @@ services:
       - db
   db:
     image: mysql:5.7
+    platform: linux/amd64
     ports:
       - "3366:3306"
     volumes:
       - db-volume:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: rails_app_db
 
 volumes:
   db-volume:
