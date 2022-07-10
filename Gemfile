@@ -63,6 +63,12 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  # K察
+  gem 'rubocop', require: false
+  gem 'rubocop-rails', require: false
+  
+  gem 'letter_opener'
 end
 
 group :test do
@@ -80,3 +86,5 @@ gem "mysql2", "~> 0.5.3"
 gem "bcrypt"
 gem "ruby-debug-ide"
 gem "debase"
+gem 'devise'
+gem 'bootstrap', '~> 5.1.3'
