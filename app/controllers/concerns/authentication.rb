@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # app/controllers/concerns/authentication.rb
 module Authentication
   extend ActiveSupport::Concern
@@ -18,7 +20,7 @@ module Authentication
   end
 
   def redirect_if_authenticated
-    redirect_to root_path, alert: "You are already logged in." if user_signed_in?
+    redirect_to root_path, alert: 'You are already logged in.' if user_signed_in?
   end
 
   private
@@ -32,6 +34,6 @@ module Authentication
   end
 
   def authenticate_user!
-    redirect_to login_path, alert: "You need to login to access that page." unless user_signed_in?
+    redirect_to login_path, alert: 'You need to login to access that page.' unless user_signed_in?
   end
 end

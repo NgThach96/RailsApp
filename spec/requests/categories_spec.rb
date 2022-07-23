@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 # spec/requests/categories_request_spec.rb
@@ -39,7 +41,7 @@ RSpec.describe 'Categories', type: :request do
       end
       it 'returns a validation failure message' do
         expect(response.body)
-          .to include("is too short (minimum is 3 characters)")
+          .to include('is too short (minimum is 3 characters)')
       end
     end
   end

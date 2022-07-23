@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'Books', type: :request do
@@ -24,7 +26,7 @@ RSpec.describe 'Books', type: :request do
         expect(json['id']).to eq(book_id)
       end
     end
-    context  do
+    context do
       let(:book_id) { 0 }
       it 'returns status code 404' do
         expect(response).to have_http_status(404)

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -6,7 +8,7 @@ Rails.application.routes.draw do
   get 'static_pages/home'
   devise_for :users
 
-  root to: "static_pages#home"
+  root to: 'static_pages#home'
   # resources :articles do
   #   resources :comments
   # end
