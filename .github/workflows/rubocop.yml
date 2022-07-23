@@ -17,4 +17,4 @@ jobs:
           rubocop_version: gemfile
           github_token: ${{ secrets.GITHUB_TOKEN }}
           rubocop_extensions: meowcop
-          reporter: github-pr-review
+          reporter: github-pr-check
