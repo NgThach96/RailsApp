@@ -1,0 +1,21 @@
+name: rubocop
+
+on: pull_request
+
+jobs:
+  rubocop:
+    name: Run rubocop
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      - name: Set ruby version
+        uses: ruby/setup-ruby@v1
+      - name: rubocop
+        uses: reviewdog/action-rubocop@v1
+        with:
+          rubocop_version: gemfile
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          rubocop_flags: --config backend/.rubocop.yml backend/
+          rubocop_extensions: meowcop
+          reporter: github-pr-review
