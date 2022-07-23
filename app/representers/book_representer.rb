@@ -1,8 +1,11 @@
+# frozen_string_literal: true
+
 class BooksRepresenter
   class BookRepresenter
     def initialize(book)
       @book = book
     end
+
     def as_json
       {
         id: book.id,
@@ -12,7 +15,9 @@ class BooksRepresenter
         date_added: book.created_at
       }
     end
+
     private
+
     attr_reader :book
   end
 end

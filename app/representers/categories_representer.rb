@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
 class CategoriesRepresenter
   def initialize(categories)
     @categories = categories
   end
+
   def as_json
     categories.map do |category|
       {
@@ -10,6 +13,8 @@ class CategoriesRepresenter
       }
     end
   end
+
   private
+
   attr_reader :categories
 end

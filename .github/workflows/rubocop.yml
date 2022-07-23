@@ -1,0 +1,21 @@
+name: rubocop
+
+on: pull_request
+
+jobs:
+  rubocop:
+    name: Run rubocop
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      - name: Set ruby version
+        uses: ruby/setup-ruby@v1
+      - name: rubocop
+        uses: reviewdog/action-rubocop@v1
+        with:
+          rubocop_version: gemfile
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          rubocop_extensions: rubocop-rails:gemfile
+          fail_on_error: true
+          reporter: github-pr-review
