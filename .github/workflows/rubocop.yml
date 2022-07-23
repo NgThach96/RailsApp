@@ -16,6 +16,5 @@ jobs:
         with:
           rubocop_version: gemfile
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          rubocop_flags: --config backend/.rubocop.yml backend/
           rubocop_extensions: meowcop
           reporter: github-pr-review
